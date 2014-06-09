@@ -22,3 +22,6 @@ TEST_CASE( "check attributes", "[working]" )
 	key = root->attr->attr->key;
 	REQUIRE(key=="a");
 }
+
+
+// as the final output is correct, everything else in the reading function if working fine.

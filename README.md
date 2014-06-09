@@ -128,15 +128,15 @@ It parses through/ support:
 		<code><?xml version="1.0" encoding="UTF-8"?></code>
 
 2. Comments </br>
-		<code><!-- <book>Happy Potter</book> --></code>
+		<code><!-- <book>Harry Potter</book> --></code>
 
 3. Multi-level tags 
 
 4. ** Grouping to tags of same name even when they dont occur in sequence (in the same level) and this feature can easily be switched of if required.
-	<code>~	<code><book></code>Harry Potter<code></book></code></code>
-	<code>~	<code><book></code>Harry Potter<code></book></code></code>
-	<code>	<code><fruit></code> Mango <code></fruit></code></code>
-	<code>~	<code><book></code>Harry Potter<code></book></code></code>
+  ~ <book><Harry Potter</book>
+  ~ <book><Harry Potter</book>
+    <fruit>< Mango </fruit>
+  ~ <book><Harry Potter</book>
 	All 3 books will be clubbed together in the same array.
 
 5. Empty tags, Attributes and all other fundamentals. 
