@@ -156,7 +156,11 @@ Working of the code
 ========
 
 1. The XML file is read and piped into a string and is marked bt a root tag on both ends.
+
 2. The string is the parsed through to get opening and respective closing tags.
+
 3. The data inside those tags is then parsed to differntiate them into child elements, attributes, text, and other characteristics.
+
 4. A chart (graph) with multiple nodes is created which is links to other nodes as child (if in a lower level) or sibblings (if in the same level).
+
 5. The above chart is used to print JSON with with proper indentation and brackets. The output can be easily validated on jsonlint.com .
