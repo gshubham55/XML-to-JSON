@@ -1,3 +1,11 @@
+How To USE
+========
+1. Paste the input XML in input.xml file (File name can be changed in the main.cpp MACRO).
+
+2. Run main.cpp. (In terminal, type: <code>g++ main.cpp</code>)
+
+3. Get the output in the output.json file.
+
 Well formed XML
 ========
 
@@ -13,6 +21,7 @@ The following assumptions are taken which define the "well formendness" of XML d
 
 5. A single "root" element contains all the other elements
 		(The code works just fine even without any such root tag)
+
 
 Transfromation
 ========
@@ -132,7 +141,7 @@ It parses through/ support:
 
 3. Multi-level tags 
 
-4. ** Grouping to tags of same name even when they dont occur in sequence (in the same level) and this feature can easily be switched of if required.
+4. ** Grouping to tags of same name even when they dont occur in sequence (in the same level) and this feature can easily be switched of if required. (see below code in raw form, if on github)
   ~ <book><Harry Potter</book>
   ~ <book><Harry Potter</book>
     <fruit>< Mango </fruit>
@@ -141,10 +150,13 @@ It parses through/ support:
 
 5. Empty tags, Attributes and all other fundamentals. 
 
-How To
+6. Take care of indentation while showing the output.
+
+Working of the code
 ========
-1. Paste the input XML in input.xml file (File name can be changed in the main.cpp MACRO).
 
-2. Run main.cpp. (In terminal, type: <code>g++ main.cpp</code>)
-
-3. Get the output in the output.json file.
+The XML file is read and piped into a string and is marked bt a root tag on both ends.
+The string is the parsed through to get opening and respective closing tags.
+The data inside those tags is then parsed to differntiate them into child elements, attributes, text, and other characteristics.
+A chart (graph) with multiple nodes is created which is links to other nodes as child (if in a lower level) or sibblings (if in the same level).
+The above chart is used to print JSON with with proper indentation and brackets. The output can be easily validated on jsonlint.com .
