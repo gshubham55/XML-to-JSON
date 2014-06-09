@@ -143,9 +143,8 @@ It parses through/ support:
 
 How To
 ========
-1. Paste the input XML in input.xml file (File name can be changed in the main.cpp MACRO)
+1. Paste the input XML in input.xml file (File name can be changed in the main.cpp MACRO).
 
 2. Run main.cpp. (In terminal, type: <code>g++ main.cpp</code>)
 
-3. Get the output in the output.json file
-
+3. Get the output in the output.json file.
