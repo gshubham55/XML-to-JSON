@@ -1,7 +1,7 @@
 Well formed XML
 ========
 
-The following assumptions are taken which define the "well formendness" of XML data( <a src="http://en.wikipedia.org/wiki/XML#Well-formedness_and_error-handling/">wikipedia-Well formed XML</a> ) :
+The following assumptions are taken which define the "well formendness" of XML data( http://en.wikipedia.org/wiki/XML#Well-formedness_and_error-handling/ ) :
 
 1. The document contains only properly encoded legal Unicode characters
 
