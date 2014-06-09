@@ -1,17 +1,10 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#define CATCH_CONFIG_MAIN 
 #include "catch.hpp"
 using namespace std;
 #include "../basicfunctions.h"
 ofstream out;
 #include "../classes.h"
 #include "../secondaryfunctions.h"
-
-// TEST_CASE( "check ", "[working]" ) 
-// {
-	
-//     REQUIRE( );
-// }
-
 
 
 TEST_CASE( "check getTagName()", "[working]" ) 

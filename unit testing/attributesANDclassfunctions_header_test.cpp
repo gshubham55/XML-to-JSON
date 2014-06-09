@@ -1,4 +1,4 @@
-#define CATCH_CONFIG_MAIN  // This tells Catch to provide a main() - only do this in one cpp file
+#define CATCH_CONFIG_MAIN  
 #include "catch.hpp"
 using namespace std;
 #include "../basicfunctions.h"
@@ -22,9 +22,3 @@ TEST_CASE( "check attributes", "[working]" )
 	key = root->attr->attr->key;
 	REQUIRE(key=="a");
 }
-
-// TEST_CASE( "check ", "[working]" ) 
-// {
-	
-//     REQUIRE( );
-// }
