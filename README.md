@@ -27,8 +27,6 @@ Transformation is shown below:
 </td>
 <td bgcolor="#CCCCCC"><strong>JSON</strong>
 </td>
-<td bgcolor="#f0f0f0"><strong>Access</strong>
-</td>
 </tr>
 
 <tr>
@@ -126,19 +124,19 @@ Support
 
 It parses through/ support:
 
-1. XML declaration
+1. XML declaration </br>
 		<code><?xml version="1.0" encoding="UTF-8"?></code>
 
-2. Comments
+2. Comments </br>
 		<code><!-- <book>Happy Potter</book> --></code>
 
 3. Multi-level tags 
 
 4. ** Grouping to tags of same name even when they dont occur in sequence (in the same level) and this feature can easily be switched of if required.
-	<code>~	<book>Harry Potter</book></code>
-	<code>~	<book>Harry Potter</book></code>
-	<code>	<fruit> Mango </fruit></code>
-	<code>~	<book>Harry Potter</book></code>
+	<code>~	<code><book></code>Harry Potter<code></book></code></code>
+	<code>~	<code><book></code>Harry Potter<code></book></code></code>
+	<code>	<code><fruit></code> Mango <code></fruit></code></code>
+	<code>~	<code><book></code>Harry Potter<code></book></code></code>
 	All 3 books will be clubbed together in the same array.
 
 5. Empty tags, Attributes and all other fundamentals. 
@@ -147,7 +145,7 @@ How To
 ========
 1. Paste the input XML in input.xml file (File name can be changed in the main.cpp MACRO)
 
-2. Run main.cpp. (In terminal, type: g++ main.cpp)
+2. Run main.cpp. (In terminal, type: <code>g++ main.cpp</code>)
 
 3. Get the output in the output.json file
 
