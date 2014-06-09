@@ -19,33 +19,126 @@ Transfromation
 
 Transformation is shown below:
 
-N	XML	                         	 	 JSON	
-1	<e/>	                     	 	"e": null	
-2	<e>text</e>	                  	 	"e": "text"
-3	<e name="value" />	          	 	"e":{"@name": "value"}
-4	<e name="value">text</e>	  	 	"e": { "@name": "value", "#text": "text" }	
-5	<e> <a>text</a> <b>text</b> </e>	"e": { "a": "text", "b": "text" }	
-6	<e> <a>text</a> <a>text</a> </e>	"e": { "a": ["text", "text"] }	
-7	<e> text <a>text</a> </e>			"e": { "#text": "text", "a": "text" }
+<table>
+<tbody><tr>
+<td bgcolor="#CCCCCC"><strong>Pattern</strong>
+</td>
+<td bgcolor="#f0f0f0"><strong>XML</strong>
+</td>
+<td bgcolor="#CCCCCC"><strong>JSON</strong>
+</td>
+<td bgcolor="#f0f0f0"><strong>Access</strong>
+</td>
+</tr>
 
+<tr>
+<td bgcolor="#CCCCCC">1</td>
+<td bgcolor="#f0f0f0">
+<code>&lt;e/&gt;</code>
+</td>
+<td bgcolor="#CCCCCC">
+<code>"e": null</code>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC">2</td>
+<td bgcolor="#f0f0f0">
+<code>&lt;e&gt;text&lt;/e&gt;</code>
+</td>
+<td bgcolor="#CCCCCC">
+<code>"e": "text"</code>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC">3</td>
+<td bgcolor="#f0f0f0">
+<code>&lt;e name="value" /&gt;</code>
+</td>
+<td bgcolor="#CCCCCC">
+<code>"e":{"@name": "value"}</code>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC">4</td>
+<td bgcolor="#f0f0f0">
+<code>&lt;e name="value"&gt;text&lt;/e&gt;</code>
+</td>
+<td bgcolor="#CCCCCC">
+<code>"e": {
+  "@name": "value",
+  "#text": "text"
+}</code>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC">5</td>
+<td bgcolor="#f0f0f0">
+<code>&lt;e&gt;
+  &lt;a&gt;text&lt;/a&gt;
+  &lt;b&gt;text&lt;/b&gt;
+&lt;/e&gt;</code>
+</td>
+<td bgcolor="#CCCCCC">
+<code>"e": { 
+  "a": "text",
+  "b": "text"
+}</code>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC">6</td>
+<td bgcolor="#f0f0f0">
+<code>&lt;e&gt;
+  &lt;a&gt;text&lt;/a&gt;
+  &lt;a&gt;text&lt;/a&gt;
+&lt;/e&gt;</code>
+</td>
+<td bgcolor="#CCCCCC">
+<code>"e": {
+  "a": ["text", "text"]
+}</code>
+</td>
+</tr>
+
+<tr>
+<td bgcolor="#CCCCCC">7</td>
+<td bgcolor="#f0f0f0">
+<code>&lt;e&gt;
+  text
+  &lt;a&gt;text&lt;/a&gt;
+&lt;/e&gt;</code>
+</td>
+<td bgcolor="#CCCCCC">
+<code>"e": {
+  "#text": "text",
+  "a": "text"
+}</code>
+</td>
+</tr>
+</tbody></table>
 Support
 ========
 
 It parses through/ support:
 
 1. XML declaration
-		<?xml version="1.0" encoding="UTF-8"?>
+		<code><?xml version="1.0" encoding="UTF-8"?></code>
 
 2. Comments
-		<!-- <book>Happy Potter</book> -->
+		<code><!-- <book>Happy Potter</book> --></code>
 
 3. Multi-level tags 
 
 4. ** Grouping to tags of same name even when they dont occur in sequence (in the same level) and this feature can easily be switched of if required.
-	~	<book>Harry Potter</book>
-	~	<book>Harry Potter</book>
-		<fruit> Mango </fruit>
-	~	<book>Harry Potter</book>
+	<code>~	<book>Harry Potter</book></code>
+	<code>~	<book>Harry Potter</book></code>
+	<code>	<fruit> Mango </fruit></code>
+	<code>~	<book>Harry Potter</book></code>
 	All 3 books will be clubbed together in the same array.
 
 5. Empty tags, Attributes and all other fundamentals. 
